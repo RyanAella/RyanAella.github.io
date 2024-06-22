@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+        <title>Portfolio Website</title>
+        <link rel="stylesheet" href="style.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+
+        <header class="header">
+            <a href="#home" class="logo">Rebecca
+                <span>Biebl</span></a>
+
+                <i class='bx bx-menu' id="menu-icon"></i>
+
+            <nav class="navbar">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <section class="home" id="home">
+            <div class="home-content">
+                <h1>Hi, It's <span>Rebecca</span></h1>
+                <h3>I'm a <span> Software Engineer</span></h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                
+                <div class="social-icons">
+                    <a href="#"><i class='bx bxl-linkedin' ></i></a>
+                    <a href="#"><i class='bx bxl-github' ></i></a>
+                    <a href="#"><i class='bx bxl-instagram-alt' ></i></a>
+                </div>
+
+                <div class="btn-group">
+                    <a href="#" class="btn">Hire</a>
+                    <a href="#contact"
+                    class="btn">Contact</a>
+                </div>
+            </div>
+            <div class="home-img">
+                <img src="image.jpg" alt="">
+            </div>
+        </section>
+
+        <section class="about" id="about">
+
+            <div class="about-img">
+                <img src="image.jpg" alt="">
+            </div>
+
+            <div class="about-content">
+                <h2>About <span>Me</span></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae harum suscipit libero natus laborum nam vitae quod ratione voluptate esse?<p></p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+<!-- 
+            <div class="timeline-items">
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                        <div class="timeline-date">2015</div>
+                        <div class="timeline-content">
+                            <h3>Vocational training as an automotive mechatronics technician</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae harum suscipit libero natus laborum nam vitae quod ratione voluptate esse?<p>
+                        </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                        <div class="timeline-date">2019</div>
+                        <div class="timeline-content">
+                            <h3>University</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae harum suscipit libero natus laborum nam vitae quod ratione voluptate esse?</p>
+                        </div>
+                </div>
+
+            </div> -->
+        </section>
+
+        <section class="services" id="services">
+            <h2 class="heading">Services</h2>
+
+            <div class="services-container">
+                <div class="service-box">
+                    <div class="service-info">
+                        <i class="bx bx-code-curly"></i>
+                        <h4>Software Engineering</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae harum suscipit libero natus laborum nam vitae quod ratione voluptate esse?</p>
+                    </div>
+                </div>
+
+                <div class="service-box">
+                    <div class="service-info">
+                        <i class="bx bx-code"></i>
+                        <h4>Game Developement</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae harum suscipit libero natus laborum nam vitae quod ratione voluptate esse?</p>
+                    </div>
+                </div>
+
+                <div class="service-box">
+                    <div class="service-info">
+                        <i class="bx bxs-devices"></i>
+                        <h4>Systems Engineering</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae harum suscipit libero natus laborum nam vitae quod ratione voluptate esse?</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <h2 class="heading">Contact <span>Me</span></h2>
+
+            <form action="">
+                <div class="input-group">
+                    <div class="input-box">
+                        <input type="text" placeholder="Full Name">
+                        <input type="email" placeholder="Email">
+                    </div>
+                    <div class="input-box">
+                        <input type="number" placeholder="Phone Number">
+                        <input type="text" placeholder="Subject">
+                    </div>
+                </div>
+                <div class="input-group-2">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                    <input type="submit" value="Send Message" class="btn">
+                </div>
+            </form>
+        </section>
+
+        <footer class="footer">
+            <div class="social-icons">
+                <a href="#"><i class='bx bxl-linkedin' ></i></a>
+                <a href="#"><i class='bx bxl-github' ></i></a>
+                <a href="#"><i class='bx bxl-instagram-alt' ></i></a>
+            </div>
+
+            <ul class="list">
+                <li>
+                    <a href="#">FAQ</a>
+                </li>
+                <li>
+                    <a href="#services">Services</a>
+                </li>
+                <li>
+                    <a href="#about">About Me</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+
+            <p class="copyright">
+                &copy; 2024 Rebecca Biebl. All rights reserved.
+            </p>
+        </footer>
+        
+        <script src="script.js"></script>
+    </body>
+</html>
