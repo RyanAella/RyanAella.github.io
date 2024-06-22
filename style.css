@@ -518,7 +518,7 @@ section {
     }
     .home {
         flex-direction: column-reverse;
-        max-width: 5rem 0;
+        margin: 5rem 0;
         gap: 5rem;
     }
     .home-content {
