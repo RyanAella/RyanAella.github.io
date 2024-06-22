@@ -13,7 +13,7 @@
     --bg-color: #080808;
     --second-bg-color: #001005;
     --text-color: white;
-    --main-color: #00ff51;
+    --main-color: rgb(0, 255, 81);
 }
 
 html {
@@ -263,6 +263,144 @@ section {
     font-size: 1.4rem;
     font-weight: 600;
     line-height: 1,7;
+}
+
+.projects {
+    background: var(--second-bg-color);
+}
+.projects h2 {
+    margin-bottom: 8rem;
+}
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+.projects-container .projects-box{
+    position: relative;
+    border-radius: 2rem;
+    height: 550px;
+    overflow: hidden;
+    display: flex;
+}
+.projects-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease;
+}
+.projects-box:hover img {
+    transform: scale(1.1);
+}
+.projects-box .projects-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.projects-box .projects-info:hover {
+    background: radial-gradient(rgba(0, 240, 40, 0.8), var(--main-color));
+    transform: scale(1.1);
+}
+.projects-info h4 {
+    font-size: 3rem;
+    color: white;
+    font-weight: 800;
+}
+.projects-info p {
+    font-size: 1.6rem;
+    margin: 0.3rem 0 1rem;
+    font-weight: 600;
+    color: white;
+}
+.projects-info a {
+    color: white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: white;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+}
+.projects-info a i {
+    font-size: 3rem;
+    color: var(--main-color);
+}
+
+.skills {
+    background-color: var(--bg-color);
+}
+.skills h2 {
+    margin-bottom: 2rem;
+}
+.skills {
+    margin: 0 auto;
+}
+.skill-bars {
+    margin-top: 8rem;
+    padding: 25px 30px;
+    background: var(--bg-color);
+    border: 2px solid var(--main-color);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.skill-bars .bar {
+    margin: 20ox 0;
+}
+.skill-bars .bar:first-child {
+    margin-top: 0px;
+}
+.skill-bars .bar .info {
+    margin-bottom: 5px;
+}
+.skill-bars .bar .info span {
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 17px;
+}
+.skill-bars .bar .progress-line {
+    height: 10px;
+    width: 100%;
+    background: white;
+    position: relative;
+    border-radius: 10px;
+}
+.bar .progress-line span {
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    background: white;
+    cursor: pointer;
+}
+.bar .progress-line.CSharp {
+    width: 100%;
+    background-color: gold;
+}
+.bar .progress-line.HLSL span {
+    width: 80%;
+    background-color: rgb(58, 58, 255);
+}
+.bar .progress-line.Python span {
+    width: 50%;
+    background-color: green;
+}
+.bar .progress-line.C span {
+    width: 25%;
+    background-color: orangered;
 }
 
 .contact {
