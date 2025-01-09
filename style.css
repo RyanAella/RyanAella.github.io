@@ -27,17 +27,14 @@ body {
 }
 
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 4rem 12%;
+    display: flex;
+    flex-wrap: wrap;
+    /* Stelle sicher, dass die Elemente bei Bedarf umgebrochen werden */
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2%;
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
 }
 
 .logo {
@@ -46,6 +43,7 @@ body {
     font-weight: 800;
     cursor: pointer;
     transition: 0.3s ease;
+    flex: 1;
 }
 
 .logo:hover {
@@ -71,6 +69,8 @@ span {
     font-weight: 500;
     transition: 0.3s ease;
     border-bottom: 3px solid transparent;
+    flex: 2;
+    justify-content: center;
 }
 
 .navbar a:hover {
@@ -93,13 +93,13 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15rem;
+    gap: 7.5rem;
 }
 
 .home-content {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     text-align: right;
 }
 .home-content h1 {
@@ -113,9 +113,10 @@ section {
     margin: 1rem 0;
 }
 .home-content p {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: 500;
     line-height: 1.8;
+    margin-bottom: 1rem;
 }
 .home-img img {
     width: 32vw;
@@ -125,8 +126,8 @@ section {
 }
 .home-img img:hover {
     box-shadow: 0 0 25px var(--main-color),
-                0 0 50px var(--main-color), 
-                0 0 100px var(--main-color);
+    0 0 50px var(--main-color), 
+    0 0 100px var(--main-color);
 }
 .social-icons a {
     display: inline-flex;
@@ -167,7 +168,7 @@ section {
 .btn:hover {
     transform: scale(1.05);
     box-shadow: 0 0 25px var(--main-color),
-                0 0 50px var(--main-color);
+    0 0 50px var(--main-color);
 }
 .btn-group a:nth-of-type(2) {
     background-color: black;
@@ -181,31 +182,35 @@ section {
     color: black;
 }
 .about {
-    display: flex;
-    align-items: center;
-    gap: 10rem;
+    flex-direction: column;
+    padding: 2rem;
+    text-align: center;
     background-color: var(--second-bg-color);
 }
+.about-img {
+    margin-bottom: 2rem;
+}
 .about-img img {
-    width: 32vh;
+    width: 80%;
+    height: auto;
     border-radius: 50%;
     box-shadow: 0 0 25px var(--main-color);
     transition: 0.4s ease-in-out;
 }
 .about-img img:hover {
     box-shadow: 0 0 25px var(--main-color),
-                0 0 50px var(--main-color), 
-                0 0 100px var(--main-color);
+    0 0 50px var(--main-color), 
+    0 0 100px var(--main-color);
 }
 .about-content h2 {
-    font-size: 7rem;
+    font-size: 4rem;
     text-align: left;
 }
 .about-content p {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
 }
 .about-content .btn {
-    margin: 3rem 0;
+    margin: 2rem 0;
 }
 
 .heading {
@@ -592,6 +597,15 @@ section {
     html {
         font-size: 55%;
     }
+    .about-content h2 {
+        font-size: 5rem;
+        /* Anpassung für mittlere Bildschirme */
+    }
+    
+    .about-content p {
+        font-size: 1.7rem;
+        /* Anpassung für mittlere Bildschirme */
+    }
     .projects-container {
         padding-bottom: 7rem;
         grid-template-columns: repeat(1, 1fr);
@@ -612,17 +626,28 @@ section {
     .footer {
         padding: 2rem 3%;
     }
+    .about-content h2 {
+        font-size: 4rem;
+        /* Kleinere Schriftgröße für noch kleinere Bildschirme */
+    }
+    
+    .about-content p {
+        font-size: 1.5rem;
+        /* Kleinere Schriftgröße für noch kleinere Bildschirme */
+    }
 }
 
 @media(max-width:955px) {
     #menu-icon {
         display: block;
+        font-size: 3.6rem;
+        color: var(--main-color);
     }
     .navbar {
         position: absolute;
         top: 100%;
         right: 0;
-        width: 40%;
+        width: 100%;
         border-left: 3px solid var(--main-color);
         border-bottom: 3px solid var(--main-color);
         border-bottom-left-radius: 2rem;
@@ -641,7 +666,7 @@ section {
     }
     .home {
         flex-direction: column;
-        margin: 5rem 4rem;
+        margin: 4rem 3rem;
     }
     .home-content h3 {
         font-size: 2.6rem;
@@ -649,9 +674,25 @@ section {
     .home-content h1 {
         font-size: 5rem;
     }
+    .home-content p {
+        font-size: 1.25rem;
+    }
     .home-img img {
-        width: 70vw;
-        margin-top: 4rem;
+        width: 65vw;
+        /* margin-bottom: 2rem; */
+    }
+    .about-img img {
+        width: 80%;
+    }
+    
+    .about-content h2 {
+        font-size: 3.5rem;
+        /* Anpassung für sehr kleine Bildschirme */
+    }
+    
+    .about-content p {
+        font-size: 1.4rem;
+        /* Kleinere Schriftgröße für sehr kleine Bildschirme */
     }
     .services h2 {
         margin-bottom: 3rem;
