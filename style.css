@@ -86,7 +86,7 @@ span {
 
 section {
     min-height: 100vh;
-    padding: 10rem 12%;
+    padding: 4rem 2%;
 }
 
 .home {
@@ -344,15 +344,57 @@ section {
     color: var(--main-color);
 }
 
-.skills {
-    background-color: var(--bg-color);
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
 }
-.skills h2 {
-    margin-bottom: 2rem;
+
+.skill-category {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-.skills {
-    margin: 0 auto;
+
+.skill-category h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center;
 }
+
+.skills-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill:hover {
+    transform: translateY(-10px);
+}
+
+.skill i {
+    font-size: 3rem;
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+.skill p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+}
+
 .skill-bars {
     margin-top: 8rem;
     padding: 25px 30px;
@@ -363,20 +405,25 @@ section {
     flex-direction: column;
     gap: 3rem;
 }
+
 .skill-bars .bar {
-    margin: 20ox 0;
+    margin: 20px 0;
 }
+
 .skill-bars .bar:first-child {
     margin-top: 0px;
 }
+
 .skill-bars .bar .info {
     margin-bottom: 5px;
 }
+
 .skill-bars .bar .info span {
     color: var(--text-color);
     font-weight: 500;
     font-size: 17px;
 }
+
 .skill-bars .bar .progress-line {
     height: 10px;
     width: 100%;
@@ -384,6 +431,7 @@ section {
     position: relative;
     border-radius: 10px;
 }
+
 .bar .progress-line span {
     height: 100%;
     position: absolute;
@@ -391,22 +439,27 @@ section {
     background: white;
     cursor: pointer;
 }
+
 .bar .progress-line.CSharp span {
     width: 68.69%;
     background-color: gold;
 }
+
 .bar .progress-line.ShaderLab span {
     width: 24.84%;
     background-color: burlywood;
 }
+
 .bar .progress-line.HLSL span {
     width: 4.16%;
     background-color: rgb(58, 58, 255);
 }
+
 .bar .progress-line.Python span {
     width: 15%;
     background-color: green;
 }
+
 .bar .progress-line.C span {
     width: 25%;
     background-color: orangered;
@@ -414,11 +467,8 @@ section {
 
 .timeline-section {
     min-height: 100vh;
-    padding: 100px 15px;
+    padding: 4rem 2%;
     background-color: var(--second-bg-color);
-}
-.timeline-section h2 {
-    margin-bottom: 5rem;
 }
 .timeline-items {
     max-width: 1000px;
@@ -436,7 +486,7 @@ section {
     left: calc(50% - 1px);
 }
 .timeline-item {
-    margin-bottom: 40px;
+    margin-bottom: 2px;
     width: 100%;
     position: relative;
 }
@@ -451,13 +501,18 @@ section {
     padding-left: calc(50% + 30px);
 }
 .timeline-dot {
-    height: 21px;
-    width: 21px;
+    height: 36px;
+    width: 36px;
     background-color: var(--main-color);
     position: absolute;
-    left: calc(50% - 8px);
-    border-radius: 50%;
+    left: calc(50% - 18px);
     top: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 20px;
 }
 .timeline-date {
     font-size: 20px;
@@ -471,7 +526,7 @@ section {
     padding: 30px;
     border-radius: 1rem;
     box-shadow: 0 0 10px var(--main-color);
-    cursor: pointer;
+    cursor: default;
     transition: 0.3s ease-in-out;
 }
 .timeline-content:hover {
@@ -611,6 +666,81 @@ section {
         grid-template-columns: repeat(1, 1fr);
         margin: 0 5rem;
     }
+
+        .project-section {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: #fff;
+        }
+
+                .project-section h2 {
+                    font-size: 3rem;
+                    font-weight: bold;
+                    margin-bottom: 2rem;
+                    text-shadow: 0 0 15px var(--main-color);
+                }
+
+.project-detail {
+    background: var(--second-bg-color);
+    color: var(--text-color);
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    background: var(--second-bg-color);
+    padding: 2rem;
+    margin: 0 auto 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 25px var(--main-color);
+    max-width: 900px;
+}
+
+.project-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.project-gallery img:hover {
+    transform: scale(1.02);
+}
+
+.project-description {
+    max-width: 800px;
+    text-align: center;
+}
+
+.project-description p {
+    font-size: 1.6rem;
+    margin: 1rem 0;
+    line-height: 1.6;
+}
+.project-description .btn {
+    margin-top: 2rem;
+}
+.project-description .btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
 }
 
 @media(max-width:1000px) {
@@ -714,4 +844,21 @@ section {
     .timeline-dot {
         left: 0;
     }
+
+    .download-btn {
+        display: inline-block;
+        padding: 1rem 3rem;
+        background: var(--main-color);
+            box-shadow: 0 0 15px var(--main-color);
+            border-radius: 3rem;
+            font-size: 1.8rem;
+            color: black;
+            font-weight: 600;
+            transition: 0.3s ease-in-out;
+        }
+    
+        .download-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color);
+        }
 }
