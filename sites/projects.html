@@ -1,100 +1,133 @@
-<!DOCTYPE html>
-<html lang="eng">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Rebecca Biebl</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Crimson+Pro:ital,wght@0,400;1,400&family=JetBrains+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
-
-<body>
-
+  <body class="subpage-mode">
     <header class="header">
-        <a href="../index.html" class="logo">Rebecca <span>Biebl</span></a>
-        <i class='bx bx-menu' id="menu-icon"></i>
-        <nav class="navbar">
-            <a href="../index.html">Home</a>
-            <!-- <a href="../sites/projects.html">Projects</a> -->
-            <a href="../sites/skills.html">Skills</a>
-            <a href="../sites/education.html">Education</a>
-            <!-- <a href="../sites/blog.html">Blog</a> -->
-            <a href="../sites/contact.html">Contact</a>
-        </nav>
+      <a href="../index.html" class="logo">Rebecca <span>Biebl</span></a>
+      <i class="bx bx-menu" id="menu-icon"></i>
+      <nav class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="about.html">About</a>
+        <!-- Link to about.html in the same directory -->
+        <a href="skills.html">Skills</a>
+        <!-- Link to skills.html in the same directory -->
+        <a href="education.html">Education</a>
+        <!-- Link to education.html in the same directory -->
+        <a href="blog.html">Blog</a>
+        <!-- Link to blog.html in the same directory -->
+        <a href="contact.html">Contact</a>
+        <!-- Link to contact.html in the same directory -->
+      </nav>
     </header>
 
-    <section class="projects" id="projects">
+    <div class="content-flow">
+      <section class="projects" id="projects">
+        <div class="line-numbers">01<br />02<br />03</div>
         <h2 class="heading">Projects</h2>
-
+        <!-- The projects-container will now be styled by the updated style.css -->
+        <!-- Each project-box will have the new grayscale and border effects -->
         <div class="projects-container">
+          <!-- Project 1: 2D World Generator -->
+          <div class="projects-box">
+            <a href="projects/2d-world-generator.html">
+              <img
+                src="../images/2D-World-Generator-GameEngines-WS-22-23.png"
+                alt="2D World Generator"
+              />
+              <div class="projects-info">
+                <h4>2D World Generator</h4>
+                <p>
+                  This project generates 2D maps using Perlin and Open Simplex
+                  Noise for biome classification and asset generation.
+                </p>
+              </div>
+            </a>
+          </div>
 
-            <!-- Project 1: 2D World Generator -->
-            <div class="projects-box">
-                <a href="/sites/projects/2d-world-generator.html">
-                    <img src="../../images/2D-World-Generator-GameEngines-WS-22-23.png" alt="2D World Generator">
-                    <div class="projects-info">
-                        <h4>2D World Generator</h4>
-                        <p>This project generates 2D maps using Perlin and Open Simplex Noise for biome classification and asset
-                            generation.</p>
-                    </div>
-                </a>
-            </div>
+          <!-- Project 2: Nature's Symphony -->
+          <div class="projects-box">
+            <a href="projects/natures-symphony.html">
+              <img
+                src="../images/Nature-s-Symphony-Labor-Games-SS-23.png"
+                alt="Nature's Symphony"
+              />
+              <div class="projects-info">
+                <h4>
+                  Nature's Symphony: Procedurally Generated Fox and Hare
+                  Ecosystem
+                </h4>
+                <p>
+                  A 3D ecosystem where foxes and hares interact with terrain and
+                  water, all procedurally generated.
+                </p>
+              </div>
+            </a>
+          </div>
 
-            <!-- Project 2: Nature's Symphony -->
-            <div class="projects-box">
-                <a href="/sites/projects/natures-symphony.html">
-                    <img src="../../images/Nature-s-Symphony-Labor-Games-SS-23.png" alt="Nature's Symphony">
-                    <div class="projects-info">
-                        <h4>Nature's Symphony: Procedurally Generated Fox and Hare Ecosystem</h4>
-                        <p>A 3D ecosystem where foxes and hares interact with terrain and water, all procedurally generated.</p>
-                    </div>
-                </a>
-            </div>
-
-            <!-- Project 3: Dynamic Terrain Generation -->
-            <div class="projects-box">
-                <a href="/sites/projects/thesis.html">
-                    <img src="../../images/Prototyp-einer-noise-basierten-Geländegenerierung-mit-Unity-Compute-Shadern.png"
-                        alt="Dynamic Terrain Generation">
-                    <div class="projects-info">
-                        <h4>Noise-based Dynamic Terrain Generation with Unity Compute Shaders</h4>
-                        <p>Explore procedural terrain generation using Compute Shaders, FBM, and domain warping in Unity.</p>
-                    </div>
-                </a>
-            </div>
-
+          <!-- Project 3: Dynamic Terrain Generation -->
+          <div class="projects-box">
+            <a href="projects/thesis.html">
+              <img
+                src="../images/Prototyp-einer-noise-basierten-Geländegenerierung-mit-Unity-Compute-Shadern.png"
+                alt="Dynamic Terrain Generation"
+              />
+              <div class="projects-info">
+                <h4>
+                  Noise-based Dynamic Terrain Generation with Unity Compute
+                  Shaders
+                </h4>
+                <p>
+                  Explore procedural terrain generation using Compute Shaders,
+                  FBM, and domain warping in Unity.
+                </p>
+              </div>
+            </a>
+          </div>
         </div>
-    </section>
+      </section>
+    </div>
 
     <footer class="footer">
+      <div class="social">
+        <a href="https://www.linkedin.com/in/rebecca-biebl-a94918211/"
+          ><i class="bx bxl-linkedin"></i
+        ></a>
+        <a href="https://github.com/RyanAella" target="_blank"
+          ><i class="bx bxl-github"></i
+        ></a>
+        <!-- <a href="#"><i class='bx bxl-instagram-alt' ></i></a> -->
+      </div>
 
-        <div class="social">
-            <a href="https://www.linkedin.com/in/rebecca-biebl-a94918211/"><i class='bx bxl-linkedin'></i></a>
-            <a href="https://github.com/RyanAella" target="_blank"><i class='bx bxl-github'></i></a>
-            <!-- <a href="#"><i class='bx bxl-instagram-alt' ></i></a> -->
-        </div>
+      <ul class="list">
+        <li>
+          <a href="#">FAQ</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+        <li>
+          <a href="#">Privacy Policy</a>
+        </li>
+      </ul>
 
-        <ul class="list">
-            <li>
-                <a href="#">FAQ</a>
-            </li>
-            <li>
-                <a href="#">Services</a>
-            </li>
-            <li>
-                <a href="#">Contact</a>
-            </li>
-            <li>
-                <a href="#">Privacy Policy</a>
-            </li>
-        </ul>
-
-        <p class="copyright">
-            &copy; 2024 Rebecca Biebl | All rights reserved.
-        </p>
+      <p class="copyright">&copy; 2024 Rebecca Biebl | All rights reserved.</p>
     </footer>
 
+    <!-- Script.js is correctly linked from the parent directory -->
     <script src="../script.js"></script>
-</body>
-
+  </body>
 </html>
