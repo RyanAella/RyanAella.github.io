@@ -35,10 +35,12 @@ body {
     #121212 100%
   );
   color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .header {
-  height: 40vh;
+  height: 25vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,6 +48,8 @@ body {
   padding: 2rem 2%;
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 100;
 }
 
 .logo {
@@ -91,7 +95,7 @@ span {
 
 .content-flow {
   max-width: 800px;
-  margin: -50px auto 100px;
+  margin: 5rem auto 100px;
   position: relative;
   z-index: 10;
 }
@@ -100,16 +104,19 @@ section {
   background: rgba(30, 30, 30, 0.8);
   padding: 4rem;
   margin-bottom: 4rem;
-  border: 1px solid rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtiler Lichtkante-Effekt */
+  backdrop-filter: blur(12px);
   transition: all 0.4s ease;
   position: relative;
+  backface-visibility: hidden;
+  /* Hardware-Beschleunigung und Antialiasing-Fix */
+  perspective: 1000px;
+  filter: blur(0.0001px);
+  transform-style: preserve-3d;
 }
 
 /* Relaxed mode for subpages */
-.subpage-mode .header {
-  height: 25vh;
-}
 
 .subpage-mode .content-flow {
   margin-top: 2rem;
@@ -121,39 +128,41 @@ section:hover {
   transform: scale(
     1.02
   ) !important; /* Overriding inline rotations on hover slightly */
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(136, 160, 112, 0.1);
 }
 
 .subpage-mode section {
-  background: transparent;
-  border: none;
-  border-left: 1px solid rgba(136, 160, 112, 0.2);
-  backdrop-filter: none;
-  padding: 2rem 0 4rem 4rem;
+  /* Behalte den Glass-Look auch auf Unterseiten */
+  background: rgba(30, 30, 30, 0.8);
+  border: 1px solid rgba(136, 160, 112, 0.1);
+  backdrop-filter: blur(12px);
+  padding: 4rem;
 }
 
 .subpage-mode section:hover {
-  transform: none !important;
-  box-shadow: none;
-  border-left-color: var(--main-color);
+  transform: scale(1.02) rotate(0deg) !important;
+  border-color: var(--main-color);
 }
 
 /* Improved Timeline for Subpages */
 .subpage-mode .timeline-items::before {
-  display: none; /* Remove central line */
+  left: 7px; /* Linie nach links schieben */
 }
 
 .subpage-mode .timeline-item {
   width: 100%;
-  padding: 0 !important;
   text-align: left !important;
   margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
+  padding-left: 45px !important;
+  padding-right: 0 !important;
 }
 
 .subpage-mode .timeline-dot {
-  display: none; /* Remove dots */
+  left: -11px; /* Punkte auf der Linie ausrichten */
 }
 
 .subpage-mode .timeline-date {
@@ -282,11 +291,13 @@ section:hover {
 .terminal-window {
   background: #0a0a0a;
   border: 2px solid #333;
+  border-radius: 8px;
   font-family: var(--font-code);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
   margin: 2rem 0;
   text-align: left;
   position: relative;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -311,6 +322,7 @@ section:hover {
   padding: 20px;
   font-size: 1.4rem;
   line-height: 1.6;
+  white-space: pre-wrap; /* Allows text to wrap on mobile */
   text-shadow: 0 0 5px rgba(136, 160, 112, 0.5);
 }
 
@@ -477,8 +489,7 @@ section:hover {
   color: white;
 }
 .projects-info a {
-  /* Removed specific styling for the icon link to match new button style */
-  display: none; /* Hide the icon link for now */
+  display: inline-block;
   /* If you want a button here, use the .btn class */
 }
 
