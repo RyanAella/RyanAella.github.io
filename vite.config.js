@@ -3,5 +3,5 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   plugins: [vue()],
-  base: "/", // Falls es direkt unter RyanAella.github.io läuft
+  base: process.env.NODE_ENV === "production" ? "/" : "/",
 });
