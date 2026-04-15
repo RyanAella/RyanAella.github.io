@@ -3,6 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  workflow_dispatch: # Ermöglicht den manuellen Start-Button in GitHub Actions
 
 permissions:
   contents: read
@@ -34,6 +35,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
+          # WICHTIG: Stelle sicher, dass dein Build-Ordner wirklich "dist" heißt
           path: "./dist"
 
       - name: Deploy to GitHub Pages
