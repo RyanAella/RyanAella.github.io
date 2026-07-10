@@ -3,9 +3,10 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from "vue";
+import { onMounted, onUnmounted, ref } from "vue";
 
 const canvas = ref(null);
+let animationFrameId = null;
 
 onMounted(() => {
   const gl = canvas.value.getContext("webgl");
@@ -111,9 +112,15 @@ onMounted(() => {
     gl.uniform1f(timeLoc, t * 0.001);
     gl.uniform2f(resLoc, canvas.value.width, canvas.value.height);
     gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
-    requestAnimationFrame(render);
+    animationFrameId = requestAnimationFrame(render);
   };
-  requestAnimationFrame(render);
+  animationFrameId = requestAnimationFrame(render);
+});
+
+onUnmounted(() => {
+  if (animationFrameId) {
+    cancelAnimationFrame(animationFrameId);
+  }
 });
 </script>
 

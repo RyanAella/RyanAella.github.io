@@ -1,5 +1,12 @@
 # Portfolio/Website
 
+## [0.2.1] - 2025-07-10
+
+### Fixed
+
+- **Shader Resource Management**: Added `cancelAnimationFrame` in `ShaderHero.vue` to prevent memory leaks and background processing when navigating away from the component.
+- **WebGL Stability**: Improved the render loop to verify the canvas context before execution.
+
 ## [0.2.0] - 2025-04-15
 
 ### Added
